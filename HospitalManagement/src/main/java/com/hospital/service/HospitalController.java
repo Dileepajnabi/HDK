@@ -24,14 +24,24 @@ public class HospitalController extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 
 		String id = request.getParameter("id");
+		String name = request.getParameter("name");
+		int age  =request.getParameter("age");
+		String address = request.getParameter("address");
+		int mobile  =request.getParameter("mobile")
+
 
 		Hospital h = null;
 
 		h = HospitalDAO.getDatafromDB(id);
+		h = HospitalDAO.getDatafromDB(name);
+		h = HospitalDAO.getDatafromDB(age);
+		h = HospitalDAO.getDatafromDB(address);
+		h = HospitalDAO.getDatafromDB(mobile);
 
 		String jsonString = new Gson().toJson(h);
 
 		pw.write(jsonString);
+		pw.write(jsonint);
 		pw.close();
 	}
 }

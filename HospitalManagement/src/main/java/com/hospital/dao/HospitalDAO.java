@@ -4,12 +4,16 @@ import com.hospital.modal.Hospital;
 
 public class HospitalDAO {
 
-	public static Hospital getDatafromDB(String id) {
+	public static Hospital getDatafromDB(String id,String name) {
 		// logic
 
 		Hospital h = new Hospital();
-		h.setCode(id);
-		h.setName("My Name is " + id);
+		h.setCode("My id is=" +id);
+		h.setName("My name is= " + name);
+		h.setAge("Age is= "+ age);
+		h.setAddress("Address= "+ address);
+		h.setMobNum("Mobile no= "+ mobile);
+	
 
 		return h;
 	}
